@@ -75,22 +75,6 @@ crossref:
   fig-prefix: "Fig." # Controls the prefix used by cross-references (“see Fig. 1”)
 ---
 
-```{=html}
-<!--
-comment template, so I don't forget how to do it lol
--->
-```
-
-```{r renv-dependencies, include=FALSE}
-# This chunk makes the core R rendering packages visible to renv::snapshot()
-# The 'knitr' and 'rmarkdown' packages pull in most of the other dependencies.
-library(knitr)
-library(rmarkdown)
-library(tinytex) 
-library(yaml)
-library(ragg)
-```
-
 \begin{center}
 \textbf{Submission Note:} Paper prepared for the Microbiology (BT321IU) course, International University - VNU-HCM.
 \end{center}

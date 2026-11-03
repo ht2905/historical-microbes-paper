@@ -161,9 +161,11 @@ git clone https://github.com/ht2905/historical-microbes.git
 cd historical-microbes
 ```
 
-### Step 2: Restore Dependencies via `renv`
+### Step 2: Restore Dependencies via `renv` (Optional for RStudio Users)
 
-This repository uses `renv` to preserve exact package versions (analogous to logging reagent catalog and lot numbers in a laboratory notebook):
+Because the manuscript is written in native Quarto Markdown and LaTeX without embedded computational code blocks, R and `renv` are strictly optional for rendering. Quarto directly compiles the manuscript using Pandoc and TinyTeX.
+
+If you are working in RStudio and wish to restore the exact R library recorded during initial development:
 
 ```bash
 Rscript -e "renv::restore()"
@@ -195,7 +197,7 @@ The output file `historical-microbes_manuscript.pdf` will be created in the root
 
 A dedicated GitHub Actions workflow ([`.github/workflows/manuscript_ci-build.yml`](.github/workflows/manuscript_ci-build.yml)) automates quality assurance and delivery:
 
-1. **Automated Validation:** On every pull request and push to `main`, the workflow spins up a clean Ubuntu runner, configures Quarto and TinyTeX, restores dependencies, and verifies that the manuscript builds cleanly without LaTeX or syntax errors.
+1. **Automated Validation:** On every pull request and push to `main`, the workflow spins up a clean Ubuntu runner, configures Quarto and TinyTeX, installs the journal format, and verifies that the manuscript builds cleanly without LaTeX or syntax errors.
 2. **Artifact Packaging:** Every run uploads `historical-microbes_manuscript.pdf` as a downloadable GitHub Actions artifact.
 3. **Automated Release Publishing:** Pushes to `main` update the `latest` tag on GitHub Releases, attaching both the compiled manuscript and cover page for direct one-click downloading by wet-lab collaborators.
 
