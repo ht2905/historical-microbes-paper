@@ -87,8 +87,18 @@ elsarticle-num.bst
 elsevier-vancouver.csl
 
 # Preamble File
-!preamble.tex
+!manuscript_preamble.tex
 /.quarto/
 .Rproj.user
 
-!historical_microbes.pdf
+# Tracked pre-compiled deliverables
+!historical-microbes_manuscript.pdf
+!course-submission_cover-page.pdf
+
+# ----------------------------------------------------------------------------
+# Standard Hygiene & Environment Exclusions
+# ----------------------------------------------------------------------------
+temp/
+logs/
+artifacts/
+.venv/
