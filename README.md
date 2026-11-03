@@ -1,42 +1,25 @@
 # Microbes as Agents of Change: Historical, Cultural, and Astrobiological Perspectives
 
-[![Build and Release Manuscript](https://github.com/ht2905/historical-microbes/actions/workflows/manuscript_ci-build.yml/badge.svg)](https://github.com/ht2905/historical-microbes/actions/workflows/manuscript_ci-build.yml)
-[![Latest PDF Release](https://img.shields.io/github/v/release/ht2905/historical-microbes?label=Download%20PDF&color=238636)](https://github.com/ht2905/historical-microbes/releases/latest)
-[![Course](https://img.shields.io/badge/Course-BT321IU%20Microbiology-0969da)](https://github.com/ht2905/historical-microbes)
-
-This repository hosts the manuscript source code, bibliographic database, figure assets, and automated build pipeline for an academic review paper prepared for the Microbiology (BT321IU) course at the School of Biotechnology, International University - Vietnam National University Ho Chi Minh City (VNU-HCM).
+This repository contains the manuscript source code, bibliographic database, and figure assets for an academic review paper prepared for the Microbiology (BT321IU) course at the School of Biotechnology, International University - Vietnam National University Ho Chi Minh City (VNU-HCM).
 
 The manuscript is typeset using Quarto and the Elsevier Journal format (`elsarticle`), producing a two-column, 17-page review with complete bibliographic citations and high-resolution figures.
 
 ---
 
-## Quick Access: Reading and Downloading the Paper
+## Quick Access: Reading the Paper
 
-This repository is optimized for wet-lab scientists and researchers who wish to read the paper immediately without setting up computational tools or compiling code locally.
+If your primary goal is to read the paper rather than recompile it from source, no software installation is required:
 
-### Direct Downloads
-
-| Deliverable | Format | Direct Repository Link | Latest CI/CD Release Build |
+| Deliverable | Format | File Link | Description |
 |---|---|---|---|
-| Complete Manuscript | PDF (17 pages) | [historical-microbes_manuscript.pdf](historical-microbes_manuscript.pdf) | [Download Latest PDF](https://github.com/ht2905/historical-microbes/releases/latest/download/historical-microbes_manuscript.pdf) |
-| Course Submission Cover Sheet | PDF (1 page) | [course-submission_cover-page.pdf](course-submission_cover-page.pdf) | [Download Latest Cover Page](https://github.com/ht2905/historical-microbes/releases/latest/download/course-submission_cover-page.pdf) |
-
-### Access Options
-
-- **Option 1: Direct PDF Reading (Recommended for Wet-Lab Scientists)**
-  Download the pre-compiled [historical-microbes_manuscript.pdf](historical-microbes_manuscript.pdf) directly from the link above. No software installation, R packages, or LaTeX distributions are required.
-- **Option 2: GitHub In-Browser Viewing**
-  Click on [historical-microbes_manuscript.pdf](historical-microbes_manuscript.pdf) to view the formatted document directly in your browser using GitHub's built-in PDF viewer.
-- **Option 3: Automated CI/CD Builds**
-  Every commit to the `main` branch automatically triggers GitHub Actions to recompile the manuscript from source and update the [GitHub Releases](https://github.com/ht2905/historical-microbes/releases/latest) package with the freshest PDF binaries.
-- **Option 4: Local Source Compilation**
-  If you wish to modify text, re-analyze references, or render locally, follow the [Reproduction Guide](#reproduction-guide-for-local-compilation) below.
+| Complete Manuscript | PDF (17 pages) | [historical-microbes_manuscript.pdf](historical-microbes_manuscript.pdf) | Complete pre-rendered manuscript in Elsevier double-column layout. |
+| Assignment Cover Sheet | PDF (1 page) | [course-submission_cover-page.pdf](course-submission_cover-page.pdf) | Official university assignment submission cover page. |
 
 ---
 
 ## Scientific Framework and Conceptual Overview
 
-Microbiology curricula conventionally treat microorganisms either as pathogenic threats or as passive biological tools (such as *Escherichia coli* cloning vectors or *Saccharomyces cerevisiae* expression hosts). This review develops a comprehensive microbial agency framework: biological attributes—including transmission dynamics, cellular stress adaptations, metabolic pathways, and environmental resistance—actively constrain, redirect, and transform human societal institutions, material culture, and scientific paradigms.
+Microbiology curricula conventionally introduce microorganisms primarily as pathogenic threats or as passive laboratory tools (such as *Escherichia coli* cloning hosts or *Saccharomyces cerevisiae* expression systems). This review argues for microbial agency—the perspective that biological properties of microbes (such as transmission kinetics, metabolic versatility, stress tolerance, and extreme environmental resilience) actively constrain, redirect, and transform human societal institutions, material culture, and scientific paradigms.
 
 ```mermaid
 flowchart TD
@@ -73,11 +56,11 @@ flowchart TD
 
 ### Manuscript Summary
 
-| Section | Topic | Key Biological Findings and Conceptual Takeaways |
+| Section | Topic | Primary Focus |
 |---|---|---|
 | Section 1 | Introduction | Establishes microbial biomass dominance and formalizes the microbial agency analytical framework. |
-| Section 2 | Microbes that Changed History | Analyzes how *Yersinia pestis* (Black Death) forced feudal labor restructuring through zoonotic transmission kinetics, and how *Variola major* (smallpox) enabled European colonial expansion while catalyzing Jennerian immunology and global eradication. |
-| Section 3 | Famous Microbiologists and Groundbreaking Discoveries | Synthesizes the transition of microbes from ambiguous environmental phenomena to identifiable, controllable entities via Pasteur (germ theory, pasteurization, attenuation), Koch (postulates and pure cultures), and Fleming (penicillin and early warnings of antimicrobial resistance). |
+| Section 2 | Microbes that Changed History | Analyzes how *Yersinia pestis* (Black Death) forced feudal labor restructuring through zoonotic transmission kinetics, and how *Variola major* (smallpox) catalyzed Jennerian immunology and global disease eradication. |
+| Section 3 | Famous Microbiologists and Groundbreaking Discoveries | Synthesizes the transition of microbes from ambiguous environmental phenomena into identifiable, controllable entities via Pasteur (germ theory, pasteurization, attenuation), Koch (postulates and pure cultures), and Fleming (penicillin and early warnings of antimicrobial resistance). |
 | Section 4 | Microbes in Art and Culture | Documents microbial pigment synthesis (prodigiosin, violacein) in agar art, eukaryotic chromoprotein expression in *E. coli*, and industrial filamentous fungal fermentation for sustainable textile dyeing. |
 | Section 5 | Bacteria in Space (Astromicrobiology) | Details extremophile physiological mechanisms, 559-day Low Earth Orbit survival on the ISS EXPOSE-E facility (ADAPT project), empirical support for lithopanspermia, and COSPAR planetary protection protocols against forward contamination. |
 | Appendix A | Supplementary Figures and Tables | Provides industrial scale-up fermentation schematics, textile pigment swatch assays, and comprehensive fungal dye catalogs. |
@@ -86,7 +69,7 @@ flowchart TD
 
 ## Standardized Media and Figure Atlas
 
-All figures are cataloged in `figures/` using a standardized semantic naming convention (`{entity}_{descriptor}.{ext}`):
+All figures are organized in `figures/` using a standardized semantic naming convention (`{entity}_{descriptor}.{ext}`):
 
 | Filename | Description | Relevant Section |
 |---|---|---|
@@ -109,9 +92,6 @@ The repository follows a standardized faceted naming convention (`{scope}_{doc-t
 
 ```text
 historical-microbes-paper/
-├── .github/
-│   └── workflows/
-│       └── manuscript_ci-build.yml           # Automated CI/CD compilation and release pipeline
 ├── figures/                                  # High-resolution scientific figures and schematics
 │   ├── astromicrobiology_spaceflight-sankey-diagram.png
 │   ├── black-death_transmission-cycle.png
@@ -139,78 +119,65 @@ historical-microbes-paper/
 
 ---
 
-## Reproduction Guide for Local Compilation
+## Step-by-Step Reproduction Guide
 
-If you wish to compile the PDF on your personal workstation rather than downloading the pre-rendered copy, follow the instructions below.
+If you wish to recompile the PDF from source on your personal computer, follow the instructions below.
 
 ### Prerequisites
 
 | Tool | Recommended Version | Purpose |
 |---|---|---|
-| Quarto CLI | 1.4 or later | Scientific document processing and typesetting engine |
-| R | 4.2 or later | Runtime environment for reproducible dependencies |
-| TinyTeX or TeX Live | Latest | LaTeX typesetting engine generating the PDF |
-| RStudio Desktop | Latest (Optional) | Integrated GUI for editing and one-click rendering |
+| Quarto CLI | 1.4 or later | Scientific document processing and publishing system |
+| TinyTeX or TeX Live | Latest | Lightweight LaTeX distribution to render the PDF |
+| R | 4.2 or later (Optional) | Runtime environment if working via RStudio |
+| RStudio Desktop | Latest (Optional) | Integrated GUI editor for one-click rendering |
 
 ### Step 1: Clone the Repository
 
-Clone the repository to your local computer:
+Clone this repository using Git:
 
 ```bash
 git clone https://github.com/ht2905/historical-microbes.git
 cd historical-microbes
 ```
 
-### Step 2: Restore Dependencies via `renv` (Optional for RStudio Users)
+### Step 2: Install the Elsevier Journal Extension
 
-Because the manuscript is written in native Quarto Markdown and LaTeX without embedded computational code blocks, R and `renv` are strictly optional for rendering. Quarto directly compiles the manuscript using Pandoc and TinyTeX.
-
-If you are working in RStudio and wish to restore the exact R library recorded during initial development:
-
-```bash
-Rscript -e "renv::restore()"
-```
-
-In interactive RStudio, open `historical-microbes.Rproj` and execute `renv::restore()` in the R console.
-
-### Step 3: Install Elsevier Journal Quarto Extension
-
-Install the official Elsevier journal format extension:
+The Elsevier layout definitions are managed via Quarto extensions. Install the extension in the project directory:
 
 ```bash
 quarto add quarto-journals/elsevier --no-prompt
 ```
 
-### Step 4: Render the Manuscript
+### Step 3: Render the Manuscript
 
-Compile the source document into the publication-grade PDF:
+Compile the Quarto Markdown source into the publication-grade PDF:
 
 ```bash
 quarto render historical-microbes_manuscript.qmd --to elsevier-pdf
 ```
 
-The output file `historical-microbes_manuscript.pdf` will be created in the root directory.
+Quarto compiles the text, formats the BibTeX citations, includes the figures from `figures/`, and outputs `historical-microbes_manuscript.pdf`.
+
+### Optional: Restore R Environment (`renv`)
+
+Because the manuscript text, tables, and figures do not execute dynamic code chunks, R is not required to render the paper. However, if you are developing in RStudio and wish to restore the exact environment recorded during project creation:
+
+```bash
+Rscript -e "renv::restore()"
+```
+
+Or open `historical-microbes.Rproj` in RStudio and run `renv::restore()` in the console.
 
 ---
 
-## Continuous Integration and Automated Delivery
+## Troubleshooting & Common Pitfalls
 
-A dedicated GitHub Actions workflow ([`.github/workflows/manuscript_ci-build.yml`](.github/workflows/manuscript_ci-build.yml)) automates quality assurance and delivery:
-
-1. **Automated Validation:** On every pull request and push to `main`, the workflow spins up a clean Ubuntu runner, configures Quarto and TinyTeX, installs the journal format, and verifies that the manuscript builds cleanly without LaTeX or syntax errors.
-2. **Artifact Packaging:** Every run uploads `historical-microbes_manuscript.pdf` as a downloadable GitHub Actions artifact.
-3. **Automated Release Publishing:** Pushes to `main` update the `latest` tag on GitHub Releases, attaching both the compiled manuscript and cover page for direct one-click downloading by wet-lab collaborators.
-
----
-
-## Troubleshooting Guide
-
-| Issue | Cause | Solution |
+| Symptom | Root Cause | Solution |
 |---|---|---|
-| `LaTeX Error: File 'elsarticle.cls' not found` | The Elsevier journal extension is missing. | Run `quarto add quarto-journals/elsevier --no-prompt` in the repository root. |
-| `pdflatex not found` or `xelatex not found` | No LaTeX distribution is detected on the system path. | Run `quarto install tinytex` in your terminal. |
-| `there is no package called 'rmarkdown'` | Local R library has not restored lockfile dependencies. | Run `Rscript -e "renv::restore()"` to restore all required packages. |
-| Figure layout or file missing error | Image paths referencing outdated folder names. | Verify that figure links point to `figures/<file>` matching the filenames in the figure atlas above. |
+| `LaTeX Error: File 'elsarticle.cls' not found` | The Elsevier Quarto journal extension is missing. | Run `quarto add quarto-journals/elsevier --no-prompt` in the project root directory. |
+| `pdflatex not found` or `xelatex not found` | No LaTeX distribution is detected on your system path. | Run `quarto install tinytex` in your terminal. |
+| Figure layout or file missing warning | Figure paths referencing outdated directory names. | Ensure all figure paths reference `figures/<file>` as cataloged in the figure atlas above. |
 
 ---
 
@@ -225,9 +192,9 @@ A dedicated GitHub Actions workflow ([`.github/workflows/manuscript_ci-build.yml
 
 | Contributor | CRediT Roles | Specific Responsibilities |
 |---|---|---|
-| **Tran Quoc Hoang** | Conceptualization, Methodology, Project Administration, Software, Investigation, Writing – Original Draft, Writing – Review & Editing | Conceived the study, created the Quarto pipeline, wrote Section 2 (*Pandemics*) and Section 3 (*Foundational Microbiologists*). |
+| **Tran Quoc Hoang** | Conceptualization, Methodology, Project Administration, Software, Investigation, Writing – Original Draft, Writing – Review & Editing | Conceived the study, structured the Quarto pipeline, wrote Section 2 (*Pandemics*) and Section 3 (*Foundational Microbiologists*). |
 | **Nguyen Hoang Tuong Vy** | Writing – Original Draft, Writing – Review & Editing | Wrote Section 5 (*Astromicrobiology*) and the Conclusion; contributed to manuscript review. |
-| **Nguyen Vy Van** | Investigation, Writing – Original Draft, Writing – Review & Editing | Conducted research and wrote Section 1 (*Introduction*) and Section 4 (*Microbial Art and Culture*). |
+| **Nguyen Vy Van** | Investigation, Writing – Original Draft, Writing – Review & Editing | Conducted background research and wrote Section 1 (*Introduction*) and Section 4 (*Microbial Art and Culture*). |
 | **Nguyen Le Ngoc Vy** | Data Curation, Visualization, Writing – Review & Editing | Co-authored Abstract, curated visual presentation materials, and participated in editorial review. |
 | **Nguyen Hoang Quynh Anh** | Data Curation, Visualization, Writing – Review & Editing | Co-authored Abstract, curated visual presentation materials, and participated in editorial review. |
 
@@ -239,7 +206,7 @@ A dedicated GitHub Actions workflow ([`.github/workflows/manuscript_ci-build.yml
 
 The authors declare that they have no known competing financial interests or personal relationships that could have appeared to influence the work reported in this paper.
 
-### Data and Material Availability
+### Data and Code Availability
 
-All source code, BibTeX reference databases, and image assets are openly maintained in this repository:
+All source files, bibliographic databases, and figure assets are available in this repository:
 [https://github.com/ht2905/historical-microbes](https://github.com/ht2905/historical-microbes)
