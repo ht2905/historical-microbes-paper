@@ -67,53 +67,27 @@ flowchart TD
 
 ---
 
-## Standardized Media and Figure Atlas
+## Media & Figure Architecture
 
-All figures are organized in `figures/` using a standardized semantic naming convention (`{entity}_{descriptor}.{ext}`):
-
-| Filename | Description | Relevant Section |
-|---|---|---|
-| [`figures/black-death_transmission-cycle.png`](figures/black-death_transmission-cycle.png) | Vector-host transmission dynamics of *Yersinia pestis* involving fleas, rodents, and humans | Section 2 |
-| [`figures/swan-neck-flask_pasteur-experiment.jpg`](figures/swan-neck-flask_pasteur-experiment.jpg) | Pasteur's swan-necked flask experiment disproving spontaneous generation | Section 3 |
-| [`figures/microbial-art_petri-dish-display.png`](figures/microbial-art_petri-dish-display.png) | Three-row agar bio-art installation at ARTIS-Micropia (Amsterdam) | Section 4 |
-| [`figures/e-coli_chromoprotein-palette.jpg`](figures/e-coli_chromoprotein-palette.jpg) | Heterologous eukaryotic chromoprotein expression palette in *Escherichia coli* | Section 4 |
-| [`figures/penicillium-purpurogenum_fabric-pigments.png`](figures/penicillium-purpurogenum_fabric-pigments.png) | Red pigment dyeing assays from *Penicillium purpurogenum* on wool, silk, polyester, and viscose | Section 4 |
-| [`figures/fungal-pigments_industrial-scaleup.jpg`](figures/fungal-pigments_industrial-scaleup.jpg) | Process schematic from solid-phase Petri dish isolation to liquid bioreactor fermentation | Section 4 |
-| [`figures/extreme-environments_earth-cross-section.jpg`](figures/extreme-environments_earth-cross-section.jpg) | Geological crust cross-section mapping terrestrial habitats of extreme polyextremophiles | Section 5 |
-| [`figures/violacein-pigment_textile-swatches.png`](figures/violacein-pigment_textile-swatches.png) | Violacein dye (*Chromobacterium violaceum*) applied with alum mordant to multiple textile types | Appendix A |
-| [`figures/astromicrobiology_spaceflight-sankey-diagram.png`](figures/astromicrobiology_spaceflight-sankey-diagram.png) | Sankey diagram mapping spaceflight medical astromicrobiology risk interactions | Appendix A |
-| [`figures/expose-e_orbital-facility.png`](figures/expose-e_orbital-facility.png) | ESA EXPOSE-E payload mounted to EuTEF on the International Space Station | Appendix A |
+Figures located in [`figures/`](figures/) follow the standardized faceted naming convention (`{entity}_{descriptor}.{ext}`) across four thematic areas:
+- **Pathogen Transmission & History:** Vector-host transmission dynamics of *Yersinia pestis* (Section 2) and Pasteur's swan-necked flask experiment disproving spontaneous generation (Section 3).
+- **Industrial Biotechnology & Bio-Art:** Eukaryotic chromoprotein palettes in *E. coli*, solid-phase to bioreactor scale-up for fungal pigments (*Penicillium purpurogenum*), and microbial art installations (Section 4).
+- **Extreme Environments & Astromicrobiology:** Terrestrial crust cross-sections of polyextremophiles, ESA EXPOSE-E spaceflight exposure payloads, and spaceflight medical risk interactions (Section 5, Appendix A).
 
 ---
 
 ## Repository Structure
 
-The repository follows a standardized faceted naming convention (`{scope}_{doc-type}.{ext}` and `{entity}_{descriptor}.{ext}`):
+The repository follows a standardized faceted naming convention:
 
 ```text
 historical-microbes-paper/
 ├── figures/                                  # High-resolution scientific figures and schematics
-│   ├── astromicrobiology_spaceflight-sankey-diagram.png
-│   ├── black-death_transmission-cycle.png
-│   ├── e-coli_chromoprotein-palette.jpg
-│   ├── expose-e_orbital-facility.png
-│   ├── extreme-environments_earth-cross-section.jpg
-│   ├── fungal-pigments_industrial-scaleup.jpg
-│   ├── microbial-art_petri-dish-display.png
-│   ├── penicillium-purpurogenum_fabric-pigments.png
-│   ├── swan-neck-flask_pasteur-experiment.jpg
-│   └── violacein-pigment_textile-swatches.png
 ├── renv/                                     # R environment reproducibility manifests
-│   ├── activate.R
-│   └── settings.json
-├── .gitignore                                # Version control exclusions and hygiene filters
 ├── _quarto.yml                               # Quarto project configuration
 ├── bibliography.bib                          # BibTeX literature database (Elsevier citations)
-├── course-submission_cover-page.pdf          # Official assignment submission cover sheet
 ├── historical-microbes_manuscript.pdf        # Pre-compiled 17-page publication-grade PDF
 ├── historical-microbes_manuscript.qmd        # Primary manuscript source document
-├── historical-microbes.Rproj                 # RStudio project configuration
-├── manuscript_preamble.tex                   # LaTeX styling, URL wrapping, and float adjustments
 └── renv.lock                                 # Exact lockfile recording reproducible R dependencies
 ```
 
