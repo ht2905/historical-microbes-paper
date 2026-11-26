@@ -111,8 +111,8 @@ If you wish to recompile the PDF from source on your personal computer, follow t
 Clone this repository using Git:
 
 ```bash
-git clone https://github.com/ht2905/historical-microbes.git
-cd historical-microbes
+git clone https://github.com/ht2905/historical-microbes-paper.git
+cd historical-microbes-paper
 ```
 
 ### Step 2: Install the Elsevier Journal Extension
@@ -183,4 +183,4 @@ The authors declare that they have no known competing financial interests or per
 ### Data and Code Availability
 
 All source files, bibliographic databases, and figure assets are available in this repository:
-[https://github.com/ht2905/historical-microbes](https://github.com/ht2905/historical-microbes)
+[https://github.com/ht2905/historical-microbes-paper](https://github.com/ht2905/historical-microbes-paper)
