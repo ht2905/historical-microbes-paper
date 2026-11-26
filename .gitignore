@@ -1,104 +1,115 @@
-# ----------------------------------------------------------------------------
-# RStudio & R Environment
-# ----------------------------------------------------------------------------
+# ==============================================================================
+# OS & Filesystem
+# ==============================================================================
+.DS_Store
+Thumbs.db
+Desktop.ini
+.Trash/
+.Trash-*/
 
-# RStudio Project and Session Files
-.Rproj.user/ # User-specific data and temporary files
-.RData # R image file
-.RDataTmp # Temporary R image file
-.Ruserdata # R user data
-# .Rproj # RStudio project file
+# ==============================================================================
+# Editors & IDEs
+# ==============================================================================
+.vscode/
+.idea/
+.obsidian/
+*.swp
+*.swo
+*~
+.~lock.*#
 
-# R console/history files (Consolen-/Verlaufsdateien)
+# ==============================================================================
+# Scratch, Temp & Logs
+# ==============================================================================
+.scratch/
+temp/
+tmp/
+logs/
+artifacts/
+*.log
+*.tmp
+*.bak
+
+# ==============================================================================
+# Secrets & Environment
+# ==============================================================================
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# ==============================================================================
+# Python
+# ==============================================================================
+.venv/
+venv/
+env/
+ENV/
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# ==============================================================================
+# R & renv
+# ==============================================================================
 .Rhistory
-# .Rprofile # User profile/startup file (often tracked, so commented/disabled in this case)
-/renv/ # Ignore the renv folder itself, but include exceptions below
+.RData
+.RDataTmp
+.Ruserdata
+.Rproj.user/
+renv/library/
+renv/local/
+renv/staging/
+renv/python/
 
-# renv exceptions: keep these tracked for environment reproducibility
-!/renv/activate.R
-!/renv/settings.json
-!renv.lock
-# You should also keep the renv/.gitignore file unless you delete renv/
-
-# ----------------------------------------------------------------------------
-# Quarto / Knitr Build Artifacts & Outputs
-# ----------------------------------------------------------------------------
-
-# Quarto and Knitr intermediate and cache files (Zwischen- und Cache-Dateien)
-.quarto/ # Quarto cache folder
-*_files/ # Knitr/R Markdown file dependencies (e.g., figure folders)
-*_cache/ # Knitr cache folder
-cache/ # General cache folder (if you use this naming)
-_freeze # Build artifact, mainly used in incremental rendering
-
-# Quarto extensions
-_extensions/
-
-# Intermediate Quarto/R Markdown files
+# ==============================================================================
+# Quarto
+# ==============================================================================
+.quarto/
+**/.quarto/
+*_files/
+*_cache/
+_freeze/
+dist/
 *.utf8.md
 *.knit.md
+*.html
 
-# LaTeX/PDF compilation temporary files
-*.fff** # **Temporary LaTeX figure/float file (the one you asked about)**
-*.aux** # LaTeX auxiliary file
-*.bbl** # BibTeX generated bibliography file
-*.blg** # BibTeX log file
-*.log** # LaTeX log file
-*.nav** # LaTeX navigation file
-*.out** # LaTeX output file
-*.snm** # LaTeX file for Beamer (presentations)
-*.toc** # LaTeX table of contents file
-*.synctex.gz** # SyncTeX file for editor synchronization
-*.spl # Spell-check file
+# ==============================================================================
+# LaTeX
+# ==============================================================================
+*.aux
+*.bbl
+*.blg
+*.fff
+*.nav
+*.out
+*.snm
+*.toc
+*.synctex.gz
+*.spl
 
-# Package build and testing artifacts
-*.tar.gz # R package tarball
-*.Rcheck/ # R package check directory
+# ==============================================================================
+# Repo-specific
+# ==============================================================================
+_extensions/
+cache/
+*.tar.gz
+*.Rcheck/
 
-# ----------------------------------------------------------------------------
-# Common System Files & Project-Specific Exclusions
-# ----------------------------------------------------------------------------
-
-# Windows/macOS/Linux system files (Systemdateien)
-Thumbs.db # Windows thumbnail cache
-.DS_Store # macOS directory service file
-*.log # General log files (already included some specific ones above, but this is a general catch-all)
-
-# Data and credentials (Uncomment if needed)
-# data/
-# .env
-# *.secrets
-# *.key
-
-# Rendered documents
-# *.html
-# *.pdf
-# *.docx
-# *.tex
-
-# ----------------------------------------------------------------------------
-# Project-specific
-# ----------------------------------------------------------------------------
-
-# Elsevier Template/Extension Files (These can be installed via Quarto CLI)
+# Elsevier template/extension files (installable via Quarto CLI)
 elsarticle.cls
 elsarticle-harv.bst
 elsarticle-num.bst
 elsevier-vancouver.csl
 
-# Preamble File
+# Tracked preamble & pre-compiled deliverables
 !manuscript_preamble.tex
-/.quarto/
-.Rproj.user
-
-# Tracked pre-compiled deliverables
 !historical-microbes_manuscript.pdf
 !course-submission_cover-page.pdf
-
-# ----------------------------------------------------------------------------
-# Standard Hygiene & Environment Exclusions
-# ----------------------------------------------------------------------------
-temp/
-logs/
-artifacts/
-.venv/
